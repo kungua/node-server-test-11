@@ -33,6 +33,8 @@ app.get("/preview/:key", cors(), (req, res) => {
   );
 });
 
-app.listen(3000, () => {
-  console.log("请原地后空翻两圈然后使用电饭煲打开 http://localhost:3000");
+let port = process.env.PORT || 3000;
+console.log(port);
+app.listen(port, () => {
+  console.log(`请原地后空翻两圈然后使用电饭煲打开 http://localhost:${port}`);
 });
